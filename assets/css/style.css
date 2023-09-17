@@ -1,7 +1,72 @@
-/* Base styles */
+/* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
+:root {
+    --red: #e74c3c;
+  }
+
 body {
+    border: 10px solid #3e4c89; /* 10px thick, solid, black border */
+    margin: 20; /*This will ensure that the border sits flush against the edge of the viewport */
+    box-sizing: border-box; /* Ensures the border width is included in the width of the element */
     font-family: Arial, sans-serif;
+    padding: 50px;
 }
+
+
+nav {
+    background-color: #2c3e50;
+    padding: 10px 0;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effects */
+a:hover {
+    background-color: #34495e;
+}
+
+/* Active link styling, using variable*/
+a[href="#about"] {
+    background-color: var(--red);
+}
+a[href="#work"] {
+    background-color: var(--red);
+}
+a[href="#contact"] {
+    background-color: var(--red);
+}
+a[href="#resume"] {
+    background-color: var(--red);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 header {
     background-color: #f9f9f9;
@@ -34,6 +99,18 @@ nav a:hover {
     background-color: #f5f5f5;
 }
 
+#about{
+    background-color: blanchedalmond;
+}
+
+#work{
+    background-color: rgb(157, 195, 100)
+}
+
+#contact{
+    background-color: burlywood
+}
+
 #work figure {
     margin: 15px 0;
 }
@@ -53,12 +130,27 @@ nav a:hover {
 
 /* Add more styles as required */
 /* ... existing styles ... */
+.appimage {
+    width: 200px;
+    height: 100px;
+    display: block;         /* To remove any default alignment issues with images */
+    border-radius: 10px;    /* Add rounded corners */
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to give a lift effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effects */
+}
+
+.appimage:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover for an interactive feel */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow depth on hover */
+}
+
 
 footer {
     background-color: #f9f9f9;
     padding: 10px 0;
     margin-top: 20px;
     border-top: 1px solid #ddd;
+    display: flex;
 }
 
 footer ul {
@@ -80,6 +172,11 @@ footer a {
 footer a:hover {
     background-color: #f5f5f5;
 }
+
+
+/* #contact{
+    line-height: 100px;
+} */
 
 /* ... other styles ... */
 
