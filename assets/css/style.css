@@ -162,20 +162,31 @@ footer a:hover {
     background-color: #f5f5f5;
 }
 
-/* Styles for desktop devices */
-@media (max-width: 992px) {
+
+/* Styles for medium devices (tablets) */
+@media (max-width: 992px) and (min-width: 768px) {
     footer ul {
-        flex-direction: column;
-        align-items: center;
+
     }
 }
 
-/* Styles for tablet devices */
-@media (max-width: 767px) {
+/* Styles for larger phones */
+@media (max-width: 767px) and (min-width: 577px) {
     footer ul {
         flex-direction: column;
         align-items: center;
+        background-color: aqua;
     }
 }
+
+/* Styles for small phones */
+@media (max-width: 576px) {
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(60, 205, 130);
+    }
+}
+
 
 
